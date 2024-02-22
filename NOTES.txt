@@ -1,0 +1,26 @@
+If you managing your state differently, or you use different property names in your user input state you of course first must transform your input object, or create a new user input object.
+
+In JS when yo're getting the value of an input field, like here for this initial investment input field, but really for any input field,that value when extracted as we're doing it here:
+
+<input
+    type='number'
+    required
+    value={userInput.initialInvestment}
+    onChange={(event) => onChange('initialInvestment', event.target.value)}
+/>
+
+ will always a string. Even if you set the 'type' here to 'number', this does not influence the type of value you're getting in JavaScript.
+ 
+
+**App.jsx:
+
+function handleChange(inputIdentifier, newValue) {
+    setUserInput(prevUserInput => {
+      return {
+        ...prevUserInput,
+        [inputIdentifier]: +newValue,
+      }
+    })
+  }
+
+We put '+' in starting of 'newValue' because simply adding this plus here will force a conversion of this string value to a number value and Add the tow values not cancatinate as a string

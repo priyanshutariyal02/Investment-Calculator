@@ -18,7 +18,7 @@ function App() {
     setUserInput(prevUserInput => {
       return {
         ...prevUserInput,
-        [inputIdentifier]: newValue,
+        [inputIdentifier]: +newValue, // we put '+' in starting of newValue because simply adding this plus here will force a conversion of this string value to a number value and Add the tow values not cancatinate as a string
       }
     })
   }
