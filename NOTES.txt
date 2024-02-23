@@ -23,4 +23,11 @@ function handleChange(inputIdentifier, newValue) {
     })
   }
 
-We put '+' in starting of 'newValue' because simply adding this plus here will force a conversion of this string value to a number value and Add the tow values not cancatinate as a string
+We put '+' in starting of 'newValue' because simply adding this plus here will force a conversion of this string value to a number value and Add the tow values not cancatinate as a string.
+
+
+**initialInvestment = valueEndOfYear - interest - annualInvestment;
+
+**totalInterest = valueEndOfYear - ( annualInvestment * year ) - initialInvestment;
+
+**totalAnnualInvestment = valueEndOfYear - totalInterest;
